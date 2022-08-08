@@ -10,8 +10,8 @@
       <nav>
           <h2 class="logo">GUITECH</h2>
           <ul>
-            <li><a href="#">HOME</a> </li>
-            <li><a href="#">PLAY</a> </li>
+<!--            <li><a href="#">HOME</a> </li>-->
+<!--            <li><a href="#">PLAY</a> </li>-->
           </ul>
           <button type="button">Login</button>
       </nav>
@@ -68,13 +68,20 @@
 <div class="row1">
     <h2 class="BEGINNER"> BEGINNER </h2>
     <div class="row__posters">
-            <img class="album" src={{ url_for('static', filename='images/TheBeatles.jpeg')}}>
-        <img class="album" src={{ url_for('static', filename='images/BobMarley.jpeg')}}>
-        <img class="album" src={{ url_for('static', filename='images/BlessidUnion.jpeg')}}>
-        <img class="album" src={{ url_for('static', filename='images/20.jpg')}}>
-        <img class="album" src={{ url_for('static', filename='images/19.jpg')}}>
-        <img class="album" src={{ url_for('static', filename='images/21.jpg')}}>
-        <img class="album" src={{ url_for('static', filename='images/23.jpg')}}>
+
+        <a class="album" href="{{ url_for('thebeatlesplaypage') }}">
+            <img src={{ url_for('static', filename='images/TheBeatles.jpeg')}}>
+            <div class="overlay"><h1 class="album_title">Love Me Do</h1></div>
+        </a>
+
+
+
+<!--        <img class="album" src={{ url_for('static', filename='images/BobMarley.jpeg')}}>-->
+<!--        <img class="album" src={{ url_for('static', filename='images/BlessidUnion.jpeg')}}>-->
+<!--        <img class="album" src={{ url_for('static', filename='images/20.jpg')}}>-->
+<!--        <img class="album" src={{ url_for('static', filename='images/19.jpg')}}>-->
+<!--        <img class="album" src={{ url_for('static', filename='images/21.jpg')}}>-->
+<!--        <img class="album" src={{ url_for('static', filename='images/23.jpg')}}>-->
     </div>
 
 <div class="row2">
@@ -99,13 +106,13 @@
         <img class="album" src={{ url_for('static', filename='images/45.jpg')}}>
     </div>
 
-<button id="BlackBirdSong">Go to play page</button>
-    <script>
-        document.querySelector('#BlackBirdSong')
-            .addEventListener('click', () => {
-            location.href = ('/thebeatlesplaypage.html')
-            });
-    </script>
+<!--<button id="BlackBirdSong">Go to play page</button>-->
+<!--    <script>-->
+<!--        document.querySelector('#BlackBirdSong')-->
+<!--            .addEventListener('click', () => {-->
+<!--            location.href = ('/thebeatlesplaypage.html')-->
+<!--            });-->
+<!--    </script>-->
 
 
 </body>

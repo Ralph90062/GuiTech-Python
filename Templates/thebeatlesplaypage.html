@@ -1,20 +1,24 @@
 <!DOCTYPE html>
 <html>
 <head>
-<link rel="stylesheet" href="{{ url_for('static', filename='play_page_style.css') }}">
-<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
-<meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="{{ url_for('static', filename='play_page_style.css') }}">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css"
+          integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A=="
+          crossorigin="anonymous" referrerpolicy="no-referrer"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 <body>
+
 <!--TextForInfoAboutSong-->
 <div class="container">
   <div class="content">
-    <div class="name">Album: the White Album </div>
+    <div class="name">Album: Please Please Me </div>
     <div class="artist">Artist: The Beatles </div>
-    <div class="year"> 1968 </div>
-    <div class="time">2 min 19 seconds</div>
-    <div class="song_name">BlackBird</div>
+    <div class="year"> 1963 </div>
+    <div class="time">2 min 22 seconds</div>
+    <div class="song_name">Love Me Do</div>
 <!--ButtonText-->
 <div class="restarttext"> RESTART </div>
     <div class="recordtext"> RECORD </div>
@@ -22,6 +26,13 @@
     <div class="hometext"> HOME </div>
 </div>
 
+    <a class="center_play"  href="{{ url_for('camera_feed') }}">
+
+    <i class="fa-solid fa-circle-play"></i>
+    <p>Play</p>
+
+    </a>
+</div>
 <!--<button id="home">HOME</button>-->
 <!--    <script>-->
 <!--        document.querySelector('#home')-->
@@ -30,13 +41,13 @@
 <!--            });-->
 <!--    </script>-->
 
-<button id="play">PLAY</button>
-    <script>
-        document.querySelector('#play')
-            .addEventListener('click', () => {
-                location.href = ('/camera_feed')
-            });
-    </script>
+<!--<button id="play">PLAY</button>-->
+<!--    <script>-->
+<!--        document.querySelector('#play')-->
+<!--            .addEventListener('click', () => {-->
+<!--                location.href = ('/camera_feed')-->
+<!--            });-->
+<!--    </script>-->
 
 <!--Mp3 song code-->
 <!--<h1>The audio src attribute</h1>-->
@@ -44,7 +55,7 @@
 <!--<p>Click on the play button to play a sound:</p>-->
 <audio hidden>
 <audio controls autoplay>
-    <source src="./static/mp3music/BlackBird.mp3" controls>
+    <source src="./static/mp3music/LoveMeDo.mp3" controls>
     song.volume = 0.2;
 <!--Your browser does not support the audio element.-->
 </audio>

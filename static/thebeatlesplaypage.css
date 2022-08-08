@@ -1,5 +1,5 @@
 body {
-    /*background: linear-gradient(to top, #fff, #000),*/ url("../static/images/BlackBird.jpeg");
+    /*background: linear-gradient(to top, #fff, #000),*/ url("../static/images/TheBeatles.jpeg");
     background-repeat: no-repeat;
 }
 
@@ -70,4 +70,34 @@ position: absolute;
 position: absolute;
   top: 89%;
   left: 24.25%;
+}
+
+.center_play{
+    text-decoration: none;
+    color: #fff;
+    position: absolute;
+    width: 150px;
+    height: 175px;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    text-align: center;
+    opacity: 0.8
+}
+
+.center_play:hover{
+    opacity: 1;
+    cursor: pointer;
+    transition: all ease-in-out 200ms;
+}
+
+.center_play i{
+    font-size: 124px;
+}
+
+.center_play p{
+   font-size: 27px;
+    margin: 10px 0;
 }
