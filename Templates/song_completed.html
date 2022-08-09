@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" href="{{ url_for('static', filename='song_completed_style.css') }}">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css"
+        integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+
+<body>
+    <!--TextForInfoAboutSong-->
+    <div class="container">
+        <h1>Song Completed</h1>
+
+        <p class="sub">Top 3 Best Scores</p>
+
+        <div class="row_header">
+            <div class="col col1">
+                <p>Rank</p>
+            </div>
+
+            <div class="col col2">
+                <p>Name</p>
+            </div>
+
+            <div class="col col3">
+                <p>Score</p>
+            </div>
+        </div>
+
+        <div class="body">
+            <div class="body-row">
+                <div class="col col1">
+                    <p>1.</p>
+                </div>
+
+                <div class="col col2">
+                    <p>Mark</p>
+                </div>
+
+                <div class="col col3">
+                    <p>12,789</p>
+                </div>
+            </div>
+
+            <div class="body-row">
+                <div class="col col1">
+                    <p>2.</p>
+                </div>
+
+                <div class="col col2">
+                    <p>Jake</p>
+                </div>
+
+                <div class="col col3">
+                    <p>10,789</p>
+                </div>
+            </div>
+
+            <div class="body-row">
+                <div class="col col1">
+                    <p>3.</p>
+                </div>
+
+                <div class="col col2">
+                    <p>Luigi</p>
+                </div>
+
+                <div class="col col3">
+                    <p>2,789</p>
+                </div>
+            </div>
+        </div>
+
+        <p class="sub">Your Personal Best</p>
+        <div class="row_header">
+            <div class="col col1">
+                <p>8.</p>
+            </div>
+
+            <div class="col col2">
+                <p>Ralph</p>
+            </div>
+
+            <div class="col col3">
+                <p>345</p>
+            </div>
+        </div>
+
+    </div>
+
+<!--    <div class="controls">-->
+
+<!--        <a class="control" href="{{ url_for('view_recording') }}">-->
+<!--            <img src={{ url_for('static', filename='images/icons/icon_playback.png' )}}>-->
+<!--            <p>View Playback</p>-->
+<!--        </a>-->
+<!--    </div>-->
+
+    <div class="content">
+
+            <div class="name"> Love Me Do</div>
+            <div class="line">
+                <div class="year"> 1963 </div>
+                <div class="time">2 min 22 seconds</div>
+            </div>
+            <div class="artist">Artist(s): The Beatles </div>
+
+            <div class="album">Album: Please Please Me</div>
+
+
+            <div class="btn_row">
+                <div class="icon">
+
+                    <img src="/static/images/icons/icon_redo.png">
+                       <p>Restart</p>
+                </div>
+               <a class="icon" href="{{ url_for('view_recording') }}">
+
+                       <img src={{ url_for('static', filename='images/icons/icon_playback.png' )}}>
+                      <p>View Playback</p>
+                </a>
+                <div class="icon">
+
+
+                    <img src="/static/images/icons/icon_share.png">
+                      <p>Share</p>
+                </div>
+
+        </div>
+
+    </div>
+
+</body>
+
+</html>

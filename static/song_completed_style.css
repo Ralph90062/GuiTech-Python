@@ -1,0 +1,225 @@
+  p {
+        margin: 0px;
+      }
+
+      body {
+      margin: 0;
+      padding: 0;
+    background-image: linear-gradient(to top, rgba(0, 0 , 0, 1), rgba(255, 255, 255, 0 )),
+     url("../static/images/TheBeatles.jpeg");
+        height: 100vh;
+        width: 100vw;
+        background-size: cover;
+        background-repeat: no-repeat;
+        color: white;
+        overflow:hidden;
+      }
+
+      .container {
+background-color: rgba(0, 0, 0, 0.35);
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+      }
+
+      .container h1 {
+        text-align: center;
+        margin-top: 25px;
+        margin-bottom: 25px;
+        font-size: 44px;
+      }
+
+      .container .sub {
+        text-align: center;
+        margin-top: 10px;
+        font-size: 24px;
+        margin-bottom: 0px;
+        text-decoration: underline;
+      }
+
+      .container .row_header {
+        margin: 10px auto 15px auto;
+        display: flex;
+        flex-direction: row;
+ background-color: rgba(0, 0, 0, 0.5);
+        border-radius: 12px;
+        width: 370px;
+        justify-content: space-between;
+        padding: 10px 35px;
+      }
+
+      .container .row_header .col {
+        flex: 1;
+      }
+
+      .container .row_header .col p{
+      font-weight: 600;
+    font-size: 20px;}
+
+      .container .row_header .col1 {
+        flex: 0 0 80px;
+      }
+
+      .container .row_header .col3 {
+        text-align: right;
+      }
+
+      .container .body {
+        margin: 0px auto 0px auto;
+        display: flex;
+        flex-direction: column;
+        background-color: rgba(0, 0, 0, 0.5);
+        border-radius: 12px;
+        width: 370px;
+        padding: 10px 35px;
+      }
+
+      .container .body-row {
+        display: flex;
+        flex-direction: row;
+
+        justify-content: space-between;
+        padding: 8px 0px;
+        border-bottom: solid 1px rgba(0, 0, 0, 1);
+      }
+
+      .container .body-row .col {
+        flex: 1;
+      }
+
+            .container .body-row .col p {
+font-weight: 600;
+    font-size: 20px;
+      }
+
+      .container .body-row .col1 {
+        flex: 0 0 80px;
+      }
+
+      .container .body-row .col3 {
+        text-align: right;
+      }
+
+      .controls {
+        position: absolute;
+        bottom: 0px;
+        left: 0px;
+        width: 200px;
+        height: 100px;
+      }
+
+
+      .controls .control{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-decoration: none;
+      }
+
+      .control img{
+        width: 45px;
+
+      }
+
+      .control p{
+    color: #fff;
+      font-weight: 600;
+      font-size: 17px;
+      margin-top: 15px;
+      }
+
+      .content {
+    position: absolute;
+    left: 45px;
+    bottom: 20px;
+    width: 450px;
+    display: flex;
+    flex-direction: column;
+}
+
+
+.name {
+  font-size: 70px;
+  font-weight: 500;
+}
+
+.line{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    padding-right: 20px;
+    margin-top: 7px;
+}
+
+.artist,.album {
+  font-size: 20px;
+
+}
+
+.artist{
+margin-top: 40px;}
+
+
+.album{
+  margin-top: 10px;
+  margin-bottom: 15px
+  }
+.year{
+flex: 0 0 200px;
+}
+
+.year,.time {
+  font-size: 24px;
+}
+
+.song_name {
+   font-size: 21px;
+}
+
+.Album{
+ background-image: url("/static/images/21.jpg");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 100vw;
+  height: 99vh;
+  margin: 0px;
+}
+
+.icon{
+text-decoration: none;
+color: #fff;
+    flex: 0 0 97px;
+    height: 70px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    align-self: center;
+    margin-right: 10px;
+    margin-top: 20px;
+    opacity: 0.8;
+}
+
+.icon:hover{
+opacity: 1;
+transition: all ease-in-out 300ms;
+cursor: pointer;
+
+}
+.icon p{
+margin: 0;
+}
+
+.icon img{
+    height: 50px;
+    width: 50px;
+    object-fit: contain;
+}
+
+.btn_row{
+display: flex;
+flex-direction: row;
+justify-content: flex-starts;
+}
