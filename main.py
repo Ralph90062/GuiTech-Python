@@ -28,7 +28,7 @@ height = 150
 width = 1270
 logo = cv2.resize(logo, (width, height))
 img2gray = cv2.cvtColor(logo, cv2.COLOR_BGR2GRAY)
-ret, mask = cv2.threshold(img2gray, 5, 255, cv2.THRESH_BINARY)
+ret, mask = cv2.threshold(img2gray, 0, 255, cv2.THRESH_BINARY)
 
 # is the song playing
 isPlaying = False
@@ -102,6 +102,7 @@ def render_frets(frame, frets):
 # Starts the playing the song
 # Once total song time length has elapsed,
 # end game
+
 def start_song():
     global isRecording
     global isPlaying  # use global isPlaying variable
