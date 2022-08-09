@@ -23,7 +23,7 @@ height = 150
 width = 1270
 logo = cv2.resize(logo, (width, height))
 img2gray = cv2.cvtColor(logo, cv2.COLOR_BGR2GRAY)
-ret, mask = cv2.threshold(img2gray, 5, 255, cv2.THRESH_BINARY)
+ret, mask = cv2.threshold(img2gray, 0, 255, cv2.THRESH_BINARY)
 
 
 
@@ -83,11 +83,10 @@ def render_frets(frame, frets):
             fret.reset(frame.shape[1], frame.shape[0])
         cv2.circle(frame, (fret.x, fret.y), fret.radius, COLOR_GREEN, -1)
 
-
-
 # Starts the playing the song
 # Once total song time length has elapsed,
 # end game
+
 def start_song():
     camera = cv2.VideoCapture(0)  # CHANGE BACK TO CAM 0
     is_playing = True
@@ -124,6 +123,11 @@ def start_song():
             frets_ready = True
 
         # adds fret overlay to video feed
+        start_point = (5, 555)
+        end_point = (1270, 715)
+        color = (0,0,0)
+        cv2.rectangle(frame, start_point, end_point, color, -1)
+
         fret_overlay(frame)
 
         hand_tracking(frame)

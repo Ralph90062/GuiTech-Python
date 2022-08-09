@@ -1,6 +1,6 @@
 
 body {
-    background-image: linear-gradient(to bottom, rgba(0, 0 , 0, 1), rgba(255, 255, 255, 0 )),
+    background-image: linear-gradient(to top, rgba(0, 0 , 0, 1), rgba(255, 255, 255, 0 )),
      url("../static/images/TheBeatles.jpeg");
      height: 100vh;
     background-size: cover;
@@ -109,4 +109,11 @@ position: absolute;
 position: absolute;
   top: 89%;
   left: 24.25%;
+}
+
+.center_play{
+    position: absolute
+    top: 50%;
+    left: 50%;
+    font-size 25px;
 }

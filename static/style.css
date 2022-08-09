@@ -29,7 +29,7 @@ body {
 
 .row1 {
     color: #fff;
-    margin-left:20px
+    margin-left:30px
 }
 
 .album{
@@ -129,19 +129,19 @@ button:hover{
 }
 
 .INTERMEDIATE{
-padding-bottom: 5px
+padding: 25px
 }
 
 .BEGINNER{
-padding-bottom: 5px
+padding: 25px
 }
 
 .ADVANCED{
-padding-bottom: 5px
+padding: 25px
 }
 
 .row__posters{
-padding-bottom: 10px
+padding-bottom: 80px
 }
 
 .image {
