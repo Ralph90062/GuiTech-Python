@@ -3,9 +3,115 @@
 <head>
     <meta charset="UTF-8">
     <title>GuiTech</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='play_song_style.css') }}">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css"
+          integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A=="
+          crossorigin="anonymous" referrerpolicy="no-referrer"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 <body>
-<!--    <h1> GuiTech Video </h1>-->
-    <img src="{{url_for('video_camera')}}" width = "100%", Height = Auto >
+<div class="feed_container">
+    <img src="{{url_for('video_camera')}}">
+</div>
+
+<div class="footer">
+    <div class="footer_inner">
+        <div class="icon">
+            <img src={{ url_for('static', filename='images/icons/icon_alt.png')}}>
+        </div>
+
+        <div class="icon" id="icon_record">
+                  <img  src="/static/images/icons/icon_record.png">
+        </div>
+
+
+        <div class="icon" id="icon_play">
+            <img src="/static/images/icons/icon_pause.png">
+        </div>
+
+
+        <div class="icon">
+            <img  src={{ url_for('static', filename='images/icons/icon_restart.png')}}>
+        </div>
+
+        <a href="/" class="icon">
+            <img src={{ url_for('static', filename='images/icons/icon_home.png')}}>
+        </a>
+
+
+    </div>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+<script>
+var isRecording = false;
+var isPlaying = true;
+
+// shows the play button
+function showPlayButton() {
+  $("#icon_play").empty();
+  var img = $("<img />", {
+    src: "/static/images/icons/icon_play.png",
+    alt: "play button",
+  });
+  img.appendTo($("#icon_play"));
+  isPlaying = false;
+}
+
+// shows the pause button
+function showPauseButton() {
+    $("#icon_play").empty();
+  var img = $("<img />", {
+    src: "/static/images/icons/icon_pause.png",
+    alt: "play button",
+  });
+  img.appendTo($("#icon_play"));
+  isPlaying = true;
+}
+
+
+$("#icon_play").click(function () {
+  console.log("play");
+  $.post(
+    {
+      url: "/toggle_play",
+      data: JSON.stringify({ isPlaying: isPlaying }),
+      headers: { "Content-Type": "application/json" },
+    },
+    function (isPlaying) {
+      console.log(isPlaying);
+      if(isPlaying) showPauseButton()
+      else showPlayButton()
+    }
+  );
+});
+
+$("#icon_record").click(function () {
+  console.log("play");
+  $.post(
+    {
+      url: "/toggle_record",
+      data: JSON.stringify({ isRecording: isRecording }),
+      headers: { "Content-Type": "application/json" },
+    },
+    function (response) {
+        console.log(response)
+      $('#icon_record').toggleClass("recording");
+
+        if(!response.recording){
+            window.location.href = response.url;
+        }
+        // show/hide recoring indicator
+
+    }
+  );
+});
+
+
+
+
+</script>
 </body>
 </html>
