@@ -110,7 +110,7 @@ def start_song():
     isPlaying = True
     game_over = False
 
-    camera = cv2.VideoCapture(1)  # CHANGE BACK TO CAM 0
+    camera = cv2.VideoCapture(0)  # CHANGE BACK TO CAM 0
     is_playing = True
     frets_ready = False
     song_minutes = 4
@@ -160,7 +160,6 @@ def start_song():
 
             # adds fret overlay to video feed
             fret_overlay(frame)
-
             hand_tracking(frame)
             render_frets(frame, frets)
 
@@ -254,10 +253,11 @@ def camera_feed():
 
 @app.route('/view_recording')
 def view_recording():
+    print(recording_name)
     camera = cv2.VideoCapture(recording_name)
-    fps = camera.get(cv2.CAP_PROP_FPS)  # OpenCV v2.x used "CV_CAP_PROP_FPS"
+    fps_s = camera.get(cv2.CAP_PROP_FPS)  # OpenCV v2.x used "CV_CAP_PROP_FPS"
     frame_count = int(camera.get(cv2.CAP_PROP_FRAME_COUNT))
-    duration = frame_count / fps
+    duration = frame_count / fps_s
     print(duration)
     data = {'duration': duration}
     return render_template('view_recording.html', data=data)
