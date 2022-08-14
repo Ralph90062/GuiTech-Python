@@ -150,7 +150,7 @@ def start_song():
     game_over = False
     global curr_position
 
-    camera = cv2.VideoCapture(1)  # CHANGE BACK TO CAM 0
+    camera = cv2.VideoCapture(0)  # CHANGE BACK TO CAM 0
 
     is_playing = True
     frets_ready = False
